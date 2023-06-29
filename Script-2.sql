@@ -44,5 +44,3 @@ create table if not exists CollectionOfTracks(
 	Track_ID int references Track(id),
 	constraint pk4 primary key(collection_id, track_id)
 );
-
-alter table track add album_id int not null references Album(id)
