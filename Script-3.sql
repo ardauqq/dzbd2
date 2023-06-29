@@ -14,5 +14,13 @@ where "year" between 2018 and 2020;
 select artistname from artist
 where artistname not like '% %';
 
+
 select trackname from track
-where trackname like 'мой' or trackname like 'my';
+where trackname ilike 'my %'
+or trackname ilike '% my'
+or trackname ilike '% my %'
+or trackname ilike 'my'
+or trackname ilike '% мой'
+or trackname ilike 'мой %'
+or trackname ilike '% мой %'
+or trackname ilike 'мой';
