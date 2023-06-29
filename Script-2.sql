@@ -27,7 +27,7 @@ create table if not exists Genre(
 	GenreName varchar(20)
 );
 
-create table if not exists ArtistsGenres(
+create table if not exists ArtistGenres(
 	Artist_ID int references Artist(id),
 	Genre_ID int references Genre(id),
 	constraint pk2 primary key(artist_id, genre_id)
